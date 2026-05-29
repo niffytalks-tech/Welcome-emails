@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>How's your PRINCE2 prep going?</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+  body { margin: 0 !important; padding: 0 !important; background-color: #060c1e; }
+
+  .email-wrapper {
+    background-color: #060c1e;
+    padding: 40px 16px;
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+
+  .email-container { max-width: 600px; margin: 0 auto; }
+
+  .header {
+    background: linear-gradient(160deg, #060c1e 0%, #0a1535 50%, #060c1e 100%);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    padding: 44px 40px 32px;
+    text-align: center;
+  }
+
+  .header::before {
+    content: '';
+    display: block;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #FFD700, #FFD700, transparent);
+    margin-bottom: 36px;
+    opacity: 0.7;
+  }
+
+  .header-eyebrow {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: rgba(255, 215, 0, 0.6);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .header-title {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #FFD700;
+    line-height: 1.35;
+    text-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
+  }
+
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,215,0,0.4), transparent);
+    margin: 24px 0;
+    border: none;
+  }
+
+  .body-panel {
+    background-color: #08112e;
+    border-left: 1px solid rgba(255, 215, 0, 0.15);
+    border-right: 1px solid rgba(255, 215, 0, 0.15);
+    padding: 40px 44px;
+  }
+
+  .greeting {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    color: #f0e6c8;
+    margin-bottom: 20px;
+  }
+
+  .body-text {
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.85;
+    color: rgba(200, 215, 240, 0.85);
+    margin-bottom: 20px;
+  }
+
+  .body-text strong { color: #f0e6c8; }
+
+  .cta-wrapper { text-align: center; margin: 36px 0; }
+
+  .cta-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #b8860b, #FFD700, #b8860b);
+    color: #050a1a !important;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 16px 40px;
+    border-radius: 4px;
+    box-shadow: 0 4px 24px rgba(255, 215, 0, 0.25);
+  }
+
+  /* Study tips */
+  .tips-panel {
+    background: rgba(255, 215, 0, 0.03);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-radius: 6px;
+    padding: 28px;
+    margin: 28px 0;
+  }
+
+  .tips-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: rgba(255, 215, 0, 0.6);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .tip-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.08);
+  }
+
+  .tip-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .tip-heading {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .tip-body {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(200, 215, 240, 0.8);
+  }
+
+  /* Score callout */
+  .callout {
+    border-left: 3px solid rgba(0, 176, 255, 0.6);
+    padding: 16px 20px;
+    margin: 28px 0;
+    background: rgba(0, 176, 255, 0.04);
+  }
+
+  .callout-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: rgba(0, 176, 255, 0.7);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .callout-text {
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(200, 215, 240, 0.85);
+  }
+
+  .signature {
+    margin-top: 32px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    color: rgba(200, 215, 240, 0.85);
+    line-height: 1.8;
+  }
+
+  .signature-name {
+    color: #FFD700;
+    font-weight: bold;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .footer {
+    background-color: #04091a;
+    border: 1px solid rgba(255, 215, 0, 0.1);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    padding: 28px 40px;
+    text-align: center;
+  }
+
+  .footer-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    color: rgba(136, 153, 187, 0.5);
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-text a { color: rgba(255, 215, 0, 0.5); text-decoration: none; }
+
+  .footer-logo {
+    font-family: Georgia, serif;
+    font-size: 13px;
+    color: rgba(255, 215, 0, 0.4);
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  @media only screen and (max-width: 480px) {
+    .body-panel { padding: 28px 24px !important; }
+    .header { padding: 32px 24px 24px !important; }
+    .header-title { font-size: 21px !important; }
+    .footer { padding: 24px !important; }
+  }
+</style>
+</head>
+<body>
+<div class="email-wrapper">
+<div class="email-container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <span class="header-eyebrow">3 Days In — Check In</span>
+    <div class="header-title">
+      How's your PRINCE2<br>prep going, {{user.name}}?
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body-panel">
+
+    <p class="greeting">Hi {{user.name}},</p>
+
+    <p class="body-text">
+      It's been a few days since you joined the hot seat. Whether you've been grinding
+      through questions or life got in the way — no judgement either way.
+    </p>
+
+    <p class="body-text">
+      Either way, here are <strong>3 things that will make a real difference</strong>
+      to your Foundation exam score.
+    </p>
+
+    <hr class="gold-divider">
+
+    <!-- Study tips -->
+    <div class="tips-panel">
+      <span class="tips-title">3 tips for the PRINCE2 Foundation exam</span>
+
+      <div class="tip-item">
+        <span class="tip-heading">1. Memorise the 7 principles first</span>
+        <p class="tip-body">
+          Every theme and process in PRINCE2 traces back to a principle.
+          If you can recall all 7 cold — Continued Business Justification,
+          Learn from Experience, Defined Roles, Manage by Stages,
+          Manage by Exception, Focus on Products, Tailor to Suit —
+          the rest of the exam becomes pattern recognition.
+        </p>
+      </div>
+
+      <div class="tip-item">
+        <span class="tip-heading">2. Know who does what in the project team</span>
+        <p class="tip-body">
+          Organisation theme questions are some of the most common in the Foundation exam.
+          Be clear on the difference between the Executive, Senior User, and Senior Supplier —
+          and remember that Project Assurance <em>cannot</em> be delegated to the Project Manager.
+        </p>
+      </div>
+
+      <div class="tip-item">
+        <span class="tip-heading">3. Map every management product to its process</span>
+        <p class="tip-body">
+          The exam loves asking "in which process is X produced?"
+          Focus on: PID → Initiating, Project Brief → Starting Up,
+          Stage Plan → Managing a Stage Boundary,
+          Exception Report → Controlling a Stage.
+          Get those anchored and you'll pick up marks quickly.
+        </p>
+      </div>
+    </div>
+
+    <!-- Callout -->
+    <div class="callout">
+      <span class="callout-label">📊 The Foundation pass mark</span>
+      <p class="callout-text">
+        The PRINCE2 Foundation exam is 60 questions in 60 minutes — you need
+        <strong style="color:#f0e6c8;">33 out of 60 (55%) to pass</strong>.
+        Consistently scoring 12/15 or above in the quiz means you're in good shape.
+        Aim for 13+ before you book the real thing.
+      </p>
+    </div>
+
+    <hr class="gold-divider">
+
+    <p class="body-text">
+      Jump back in whenever you're ready — the hot seat is waiting.
+    </p>
+
+    <!-- CTA -->
+    <div class="cta-wrapper">
+      <a class="cta-btn" href="https://your-site.netlify.app" target="_blank">
+        ▶ &nbsp; Back to the Quiz
+      </a>
+    </div>
+
+    <hr class="gold-divider">
+
+    <div class="signature">
+      Rooting for you,
+      <span class="signature-name">Nifemi</span>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <span class="footer-logo">PRINCE2 FOUNDATION QUIZ</span>
+    <p class="footer-text">
+      You're receiving this because you purchased access at
+      <a href="https://whop.com/checkout/plan_bxWOyqeEb031h">whop.com</a>.<br>
+      Your access email: <strong style="color:rgba(200,215,240,0.6);">{{user.email}}</strong>
+    </p>
+  </div>
+
+</div>
+</div>
+</body>
+</html>
